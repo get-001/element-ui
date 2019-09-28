@@ -1,0 +1,25 @@
+
+    npm install sass
+
+           编译：$ sass sass/style.scss:css/style.css
+        监听变化：$ sass --watch sass:css
+    修改输出格式：
+    nested -- 嵌套(默认)、compact -- 紧凑、expanded -- 扩展、compressed -- 压缩
+    $ sass --watch sass:css --style compact
+    $ sass --watch sass:css --style expanded
+    $ sass --watch sass:css --style compressed
+
+1-1. 变量声明;
+$highlight-color: #F90;
+
+2-1. 父选择器的标识符&;
+article a {
+  color: blue;
+  &:hover { color: red }
+}
+
+@for $i from 0 through 24 {
+    .el-col-#{$i} {
+        width: $i / 24 * 100%;
+    }
+}
